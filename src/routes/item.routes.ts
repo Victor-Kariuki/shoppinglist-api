@@ -6,7 +6,7 @@ import {
   showItem,
   updateItem,
   deleteItem
-} from './items.handler';
+} from '../controllers/items.controller';
 
 export const router = Router({ mergeParams: true });
 
