@@ -1,3 +1,9 @@
-import {initServer} from './server';
+import 'dotenv/config';
 
-initServer();
+import {server} from './server';
+import { initDb } from './database';
+
+(async () => {
+  await initDb();
+  await server();
+})();
