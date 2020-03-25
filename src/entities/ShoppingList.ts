@@ -2,7 +2,7 @@ import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, J
 import { Item } from './Item';
 
 @Entity('shoppinglist')
-export class Shoppinglist extends BaseEntity {
+export class ShoppingList extends BaseEntity {
   @PrimaryGeneratedColumn('uuid') id: string;
 
   @Column({

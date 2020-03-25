@@ -13,6 +13,8 @@ app.get('/', (req, res) => {
 app.use(notFoundError);
 app.use(errorHandler);
 
+app.use(express.json());
+
 app.use('/api/shoppinglist', shoppinglistRoutes);
 
 const port = parseInt(process.env.PORT, 10) || 5000;
