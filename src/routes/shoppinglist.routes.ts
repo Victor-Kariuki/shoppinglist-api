@@ -1,4 +1,6 @@
 import {Router} from 'express';
+import { router as itemsRouter } from './item.routes';
+
 
 import {
   showAllShoppingList,
@@ -18,3 +20,5 @@ router.route('/:id')
   .get(showOneShoppingList)
   .put(updateShoppingList)
   .delete(deleteShoppingList);
+
+  router.use('/:id/items', itemsRouter);
